@@ -1,44 +1,15 @@
 import Image from "next/image";
 import styles from "../../styles.module.css";
 
-const SignUpPage = () => {
+const SignInPage = () => {
   return (
     <ul className="flex w-full justify-between h-[100vh] overflow-y-clip p-2.5 space-x-[7.9375rem]">
-      <li className={`${styles.textSection} pl-[7.5rem] pt-[6.125rem]`}>
-        <h2 className={styles.textHeader}>Create a new account</h2>
+      <li className={`${styles.textSection} pl-[7.5rem] pt-[7.125rem]`}>
+        <h2 className={styles.textHeader}>Sign In</h2>
         <p className={styles.textSubHeader}>
-          It's easy! Just take a minute to provide the details.
+          Welcome back! It only takes a moment to access your account.
         </p>
         <form>
-          <div className={styles.form}>
-            <div className={styles.halfField}>
-              <label htmlFor="firstName" className={styles.label}>
-                First Name
-              </label>
-              <input
-                className={styles.halfInput}
-                type="text"
-                id="firstName"
-                name="firstName"
-                placeholder="Enter your first name"
-                required
-              />
-            </div>
-            <div className={styles.halfField}>
-              <label htmlFor="lastName" className={styles.label}>
-                Last Name
-              </label>
-              <input
-                className={styles.halfInput}
-                type="text"
-                id="lastName"
-                name="lastName"
-                placeholder="Enter your last name"
-                required
-              />
-            </div>
-          </div>
-
           <div className={styles.form}>
             <label htmlFor="email" className={styles.label}>
               Email Address
@@ -64,7 +35,7 @@ const SignUpPage = () => {
                 type="password"
                 id="password"
                 name="password"
-                placeholder="Create a new password"
+                placeholder="Enter your password"
                 required
               />
               <span className={styles.eyeIcon}>
@@ -77,19 +48,10 @@ const SignUpPage = () => {
               </span>
             </div>
           </div>
-
-          <div className={styles.form}>
-            <input
-              type="checkbox"
-              id="terms"
-              name="terms"
-              className={styles.checkbox}
-              required
-            />
-            <label htmlFor="terms">
-              I agree to the{" "}
-              <span className={styles.checkboxSpan}>Terms and Conditions</span>
-            </label>
+          <div className={styles.forgotPassword}>
+            <p className={styles.forgotPasswordText}>
+              <a href="/#">Forgot password?</a>
+            </p>
           </div>
           <div className={styles.form}>
             <button type="submit" className={styles.submitButton}>
@@ -119,9 +81,9 @@ const SignUpPage = () => {
           <div className={styles.footer}>
             <p className={styles.footerText}>
               {" "}
-              Already have an account? {""}{" "}
+              Don't have an account? {""}{" "}
               <span className={styles.footerSpan}>
-                <a href="/login">Sign in</a>
+                <a href="/sign-up">Sign Up</a>
               </span>
             </p>
           </div>
@@ -130,7 +92,7 @@ const SignUpPage = () => {
 
       <li className="h-full">
         <Image
-          src="/images/church-frame.png"
+          src="/images/login-frame.png"
           alt="Church Congregation"
           width={1000}
           height={100}
@@ -141,4 +103,4 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+export default SignInPage;

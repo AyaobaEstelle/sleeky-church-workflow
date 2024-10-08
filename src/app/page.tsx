@@ -1,7 +1,12 @@
 import React from "react";
+import SignUpPage from "./(auth)/sign-up/page";
 
-const SignUp = () => {
-  return <div>SignUp</div>;
+const PageRoute = () => {
+  return (
+    <div>
+      <SignUpPage />
+    </div>
+  );
 };
 
-export default SignUp;
+export default PageRoute;
